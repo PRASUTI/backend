@@ -68,5 +68,17 @@ public class ProductDAOImpl implements ProductDAO {
 		// TODO Auto-generated method stub
 		return null;
 	}
+	@Transactional
+	public List<Product> getcategoryname(String categoryname) {
+		String hql = "from Product where categoryname='" + categoryname + "'";
+		Query query = sessionFactory.getCurrentSession().createQuery(hql);
+
+		@SuppressWarnings("unchecked")
+		List<Product> listProduct = (List<Product>) query.list();
+
+		
+
+		return listProduct;
+	}
 
 }

@@ -16,4 +16,6 @@ public interface ProductDAO {
 	public void delete(String id);
 	
 	public List<Product> getFilterProductList();
+	
+	public List<Product> getcategoryname(String categoryname);
 }
